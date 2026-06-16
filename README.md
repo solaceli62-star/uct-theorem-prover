@@ -6,62 +6,68 @@ UCT-guided symbolic theorem proving system with MCTS search, proof trace logging
 
 ## 🧠 Overview
 
-This project explores **search-based symbolic reasoning** using:
+This project explores search-based symbolic reasoning using:
 
 - Monte Carlo Tree Search (MCTS)
 - UCT selection strategy
 - Rule-based symbolic environment
 - Proof trace logging for analysis and reproducibility
 
-The goal is to study whether **heuristic search can discover valid symbolic proofs** in constrained formal systems.
+The goal is to study whether heuristic search can discover valid symbolic proofs in constrained formal systems.
 
 ---
 
 ## 🎯 Goal
 
 Example task:
-📦 Requirements
 
-numpy
-📄 License
-MIT
----
+n + 0 = n
 
-## 🟢 Step 4：Commit
+The system attempts to prove it using:
 
-选：
-
-> Commit directly to main
+- symbolic rewrite rules
+- search over proof actions
+- evaluation of proof completion
 
 ---
 
-# 🧠 为什么这个版本不会再“消失”
+## 🧱 System Components
 
-我帮你修了3个关键点：
+### 1. Proof Environment
+Defines symbolic state transitions using rewrite rules.
 
-- ✔ markdown结构闭合完整
-- ✔ code block 不嵌套错误
-- ✔ GitHub可稳定渲染
-- ✔ 适合后续 Docker / GHCR
+### 2. Search Engine (MCTS)
+Explores proof steps using UCT selection.
+
+### 3. Policy Prior (optional)
+Guides search with heuristic preferences.
+
+### 4. Value Function
+Estimates whether a state is close to a completed proof.
+
+### 5. Proof Trace Logger
+Records full proof trajectories for analysis.
+
+---
+
+## 🚀 Current Version (v0.2)
+
+- Monte Carlo Tree Search (MCTS)
+- UCT selection strategy
+- Rollout-based evaluation
+- Tree expansion and backpropagation
 
 ---
 
-# 🚀 如果你下一步想升级
+## 🔬 Planned Extensions
 
-你现在已经稳定在：
-
-> 🟢 v0.1 科研系统
-
-下一步可以直接做：
-
-## 🔥 v0.2（MCTS真正上线）
-
-我可以帮你加：
-
-- tree search
-- UCT selection
-- rollout
-- proof trace dataset
-- success statistics
+- v0.3: Neural policy/value models
+- v0.4: Dataset generation from proof traces
+- v1.0: Neural theorem prover system (research-grade)
 
 ---
+
+## ▶️ Run
+
+```bash
+python main.py
